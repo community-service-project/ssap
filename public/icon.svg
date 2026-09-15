@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="ssap-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="ssap-accent" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#0f172a" />
+  <rect x="24" y="24" width="464" height="464" rx="88" fill="none" stroke="#1e293b" stroke-width="8" />
+  
+  <!-- Central Cap / Shield Motif -->
+  <path d="M256 120 L400 196 L256 272 L112 196 Z" fill="url(#ssap-grad)" />
+  <path d="M168 230 V310 C168 354 208 392 256 392 C304 392 344 354 344 310 V230 L256 276 Z" fill="#1e293b" stroke="url(#ssap-grad)" stroke-width="12" stroke-linejoin="round" />
+  
+  <!-- Checkmark / Life Balance Arc inside Shield -->
+  <path d="M210 305 L242 337 L304 275" fill="none" stroke="url(#ssap-accent)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Tassel / Star Accent -->
+  <circle cx="400" cy="196" r="10" fill="#38bdf8" />
+  <path d="M400 206 V270" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" />
+  <circle cx="400" cy="274" r="8" fill="#f59e0b" />
+</svg>

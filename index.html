@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>SSAP — Student Productivity &amp; Life Management PWA</title>
+    <meta name="description" content="A mobile-first Progressive Web App combining Academic Works, Personal Works, Tasks, Goals, Timetable/Schedule, and Smart Notifications." />
+    <meta property="og:title" content="SSAP — Student Productivity &amp; Life Management PWA" />
+    <meta property="og:description" content="A mobile-first Progressive Web App combining Academic Works, Personal Works, Tasks, Goals, Timetable/Schedule, and Smart Notifications." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#1e293b" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="SSAP" />
+    <link rel="icon" type="image/svg+xml" href="/public/icon.svg" />
+    <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" />
+    <link rel="manifest" href="/public/manifest.webmanifest" />
+
+    <!-- Tailwind, compiled ahead of time from the classes actually used in index.html and
+         js/**/*.js (same utility classes as the original React/JSX). This replaces the
+         cdn.tailwindcss.com <script> so styling no longer depends on an external CDN being
+         reachable at runtime — important for a PWA that's meant to also work offline. -->
+    <link rel="stylesheet" href="/css/tailwind.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <!-- Lucide icons (same icon set as lucide-react, plain <script> + data-lucide attrs) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-indigo-500 selection:text-white min-h-screen">
+    <div id="root" class="min-h-screen flex flex-col bg-slate-50 text-slate-900 selection:bg-indigo-500 selection:text-white font-sans antialiased">
+      <div id="navbar-root"></div>
+      <main id="view-root" class="flex-1"></main>
+      <div id="quick-add-root"></div>
+      <div id="notification-drawer-root"></div>
+      <div id="auth-modal-root"></div>
+      <div id="offline-indicator-root"></div>
+    </div>
+
+    <script type="module" src="/js/main.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
+  </body>
+</html>

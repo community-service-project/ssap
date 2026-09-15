@@ -1,0 +1,17 @@
+{
+  "name": "ssap-web",
+  "version": "1.0.0",
+  "description": "This is a full rewrite of the original React + TypeScript app into **plain HTML, CSS and JavaScript** (no build step, no framework, no bundler), backed by **Supabase** for authentication and the database.",
+  "main": "sw.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i src/input.css -o css/tailwind.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
